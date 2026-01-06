@@ -1,0 +1,523 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Inter, sans-serif;
+  color: #1f2933;
+  background: #ffffff;
+}
+
+/* HEADER */
+header {
+  position: sticky;
+  top: 0;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  z-index: 1000;
+}
+
+.nav {
+  max-width: 1200px;
+  margin: auto;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 22px;
+  color: #2f6f4e;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #1f2933;
+  font-weight: 500;
+}
+
+.nav-menu .cta {
+  background: #2f6f4e;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 6px;
+}
+
+/* HERO */
+/* ================= HERO BACKGROUND IMAGE ================= */
+
+.hero {
+  position: relative;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  background-image: url("hero-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Dark green overlay */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(31, 77, 56, 0.75);
+}
+
+/* Text above overlay */
+.hero-content {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-61%);  /* PERFECT BALANCE */
+  max-width: 900px;
+  padding: 40px;
+  color: #ffffff;
+  text-align: center;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: 44px;
+  margin-bottom: 16px;
+}
+
+.hero-content p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 70vh;
+  }
+
+  .hero-content h1 {
+    font-size: 30px;
+  }
+}
+
+
+.hero-buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.pill-btn {
+  background: #000;
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* SECTIONS */
+.section {
+  padding: 80px 24px;
+}
+
+.section.light {
+  background: #f7f9f8;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* FULL WIDTH */
+.fw-section {
+  padding: 90px 0;
+}
+
+.fw-inner {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .fw-inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* BACKGROUNDS */
+.bg-light-yellow { background: #FFF4C9; }
+.bg-light-blue { background: #90D5FF; }
+.bg-pale-pink { background: #F9D1D5; }
+.bg-black { background: #0b0b0b; color: #ffffff; }
+
+/* CARDS */
+.card {
+  background: #ffffff;
+  padding: 28px;
+  border-radius: 22px;
+}
+
+/* IMAGES */
+.fw-image {
+  width: 100%;
+  border-radius: 22px;
+}
+
+/* BUTTON */
+.whatsapp-btn {
+  display: inline-block;
+  margin-top: 20px;
+  background: #25D366;
+  color: #fff;
+  padding: 14px 26px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* POWDERS */
+.powder-grid {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.powder-card {
+  background: #151515;
+  padding: 22px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.powder-card img {
+  width: 100%;
+  border-radius: 14px;
+  margin-bottom: 14px;
+}
+
+.powder-card h3 {
+  color: #fff;
+}
+
+@media (max-width: 900px) {
+  .powder-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .powder-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* IMAGE GRID */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.image-grid img {
+  width: 100%;
+  border-radius: 16px;
+}
+
+@media (max-width: 768px) {
+  .image-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* FOOTER */
+footer {
+  background: #1e4633;
+  color: #fff;
+  text-align: center;
+  padding: 40px 24px;
+}
+
+.footer-icons i {
+  margin: 0 12px;
+  font-size: 22px;
+}
+/* ================= FARMERS IMAGE FIX ================= */
+
+#farmers .image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+#farmers .image-grid img {
+  width: 100%;
+  height: 220px;              /* SAME SIZE FOR ALL */
+  object-fit: cover;          /* crop properly */
+  border-radius: 18px;        /* smooth rounded corners */
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  #farmers .image-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* ================= WHO WE WORK WITH IMAGE FIX ================= */
+
+#partners .image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+#partners .image-grid img {
+  width: 100%;
+  height: 220px;          /* SAME SIZE AS FARMERS */
+  object-fit: cover;      /* clean crop */
+  border-radius: 18px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  #partners .image-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* ===== FOOTER SOCIAL ICON FIX ===== */
+footer a {
+  text-decoration: none;
+}
+
+/* Instagram */
+footer .fa-instagram {
+  color: #E4405F;
+}
+
+/* Facebook */
+footer .fa-facebook {
+  color: #1877F2;
+}
+
+/* YouTube */
+footer .fa-youtube {
+  color: #FF0000;
+}
+
+/* Email */
+footer .fa-envelope {
+  color: #ffffff;
+}
+
+footer i {
+  font-size: 22px;
+  margin: 0 12px;
+  transition: transform 0.25s ease;
+}
+
+footer i:hover {
+  transform: scale(1.15);
+}
+/* ===== STATS FIX ===== */
+.stats {
+  max-width: 900px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+  gap: 40px;
+}
+
+.stat-number {
+  font-size: 44px;
+  font-weight: 700;
+  color: #2f6f4e;
+  margin-bottom: 8px;
+}
+
+.stat-label {
+  font-size: 16px;
+  font-weight: 500;
+  color: #374151;
+}
+
+@media (max-width: 768px) {
+  .stats {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+/* ===== BUSINESS ENQUIRY – PROFESSIONAL CARD ===== */
+#enquiry {
+  background: #f6f8f5;
+}
+
+.enquiry-wrapper {
+  max-width: 620px;
+  margin: auto;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.enquiry-wrapper h2 {
+  margin-bottom: 24px;
+  color: #2f6f4e;
+}
+
+/* INPUTS */
+#enquiry input,
+#enquiry textarea {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 15px;
+}
+
+#enquiry textarea {
+  min-height: 110px;
+}
+
+/* SUBMIT BUTTON */
+#enquiry button {
+  background: #2f6f4e;
+  color: #ffffff;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+#enquiry button:hover {
+  opacity: 0.9;
+}
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.image-grid img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+/* ================= HOW DIVASA FRESH WORKS ================= */
+
+.how-it-works {
+  width: 100%;
+  background: #eaf3ee;   /* ✅ SAME SOFT GREEN AS IMAGE 2 */
+  padding: 90px 0;       /* content-based height */
+}
+
+.how-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  text-align: center;
+}
+
+.how-inner h2 {
+  font-size: 34px;
+  font-weight: 700;
+  color: #1f2933;        /* black text */
+  margin-bottom: 20px;
+}
+
+.how-inner p {
+  font-size: 16.5px;
+  line-height: 1.8;
+  color: #1f2933;        /* black text */
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .how-it-works {
+    padding: 60px 0;
+  }
+
+  .how-inner h2 {
+    font-size: 26px;
+  }
+}
+/* CENTER ORDER BUTTON UNDER TEXT COLUMN */
+.order-wrap {
+  display: flex;
+  justify-content: center;   /* ⬅ centers exactly like red mark */
+  margin-top: 28px;
+}
+/* FIX: make right column full width so center works */
+.fw-right {
+  width: 100%;
+}
+.fw-right { width: 100%; 
+  }
+/* ===== HERO TEXT POSITION ADJUSTMENT ===== */
+
+@media (max-width: 768px) {
+  .hero-content {
+    margin-left: 0;
+    padding: 0 20px;
+  }
+}
+/* ===== HERO MOBILE IMAGE FIX ===== */
+@media (max-width: 768px) {
+
+  .hero {
+    min-height: 75vh;                 /* less height */
+    background-position: center top;  /* show faces */
+    background-size: cover;           /* keep full image */
+  }
+
+.hero-content {
+  position: relative;
+  left: auto;
+  transform: none;
+  padding: 0 20px;
+}
+
+  .hero-content h1 {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  .hero-content p {
+    font-size: 15px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 14px;
+  }
+}
